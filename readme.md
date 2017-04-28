@@ -1,3 +1,27 @@
+This is a mirror of the Anti-Grain Geometry Project
+
+It comes with visual c++ 2015 solutions and Projects for all the 
+included examples.
+To make the examples compile with the vc2015 build chain I had to 
+make a number preliminary and slight changes only to the windows 
+platform specific files. 
+The agg core files have not been modified at all.
+
+This distribution includes a library project that can be linked 
+to statically from any project that uses anti-grain geometry.
+
+included solutions: 
+./agg24.sln:
+Use this solution to build only the agg24 library
+
+./examples/win32_vc2015/agg24examples.sln
+This solution includes the agg24  and the agg24winBase libraries together with the 59 example application projects.
+The small agg24winBase library includes the platform specific glue code that provides the framework for the example applications.
+
+
+Hereafter the original Readme of the project:
+---------------------------------
+
 The Anti-Grain Geometry Project
 A high quality rendering engine for C++
 http://antigrain.com
