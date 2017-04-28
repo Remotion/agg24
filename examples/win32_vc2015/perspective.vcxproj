@@ -72,22 +72,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
-	<IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
-	<IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
-	<IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
-	<IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir)intermediate\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -166,8 +166,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\interactive_polygon.cpp" />
     <ClCompile Include="..\parse_lion.cpp" />
     <ClCompile Include="..\perspective.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\interactive_polygon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

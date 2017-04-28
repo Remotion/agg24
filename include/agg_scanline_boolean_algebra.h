@@ -16,6 +16,9 @@
 #ifndef AGG_SCANLINE_BOOLEAN_ALGEBRA_INCLUDED
 #define AGG_SCANLINE_BOOLEAN_ALGEBRA_INCLUDED
 
+#pragma warning( push )
+#pragma warning( disable : 4703)
+
 #include <stdlib.h>
 #include <math.h>
 #include "agg_basics.h"
@@ -1562,6 +1565,6 @@ namespace agg
 
 }
 
-
+#pragma warning( pop ) 
 #endif
 
