@@ -104,12 +104,6 @@ namespace agg
 
 
 
-
-
-
-
-
-
 class the_application : public agg::platform_support
 {
     double m_x[3];
@@ -135,11 +129,11 @@ public:
         add_ctrl(m_slider1);
         add_ctrl(m_slider2);
 
-        m_slider1.range(8.0, 100.0);
-        m_slider1.num_steps(23);
+        m_slider1.range(4.0, 100.0);
+        m_slider1.num_steps(24);
         m_slider1.value(32.0);
 
-        m_slider2.range(0.1, 3.0);
+        m_slider2.range(0.0, 3.0);
         m_slider2.value(1.0);
 
         m_slider1.label("Pixel size=%1.0f");
@@ -295,7 +289,7 @@ int agg_main(int argc, char* argv[])
     the_application app(agg::pix_format_bgr24, flip_y);
     app.caption("AGG Example. Anti-Aliasing Demo");
 
-    if(app.init(600, 400, agg::window_resize))
+    if(app.init(800, 600, agg::window_resize))
     {
         return app.run();
     }
