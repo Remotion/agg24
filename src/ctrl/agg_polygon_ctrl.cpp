@@ -123,6 +123,8 @@ namespace agg
 
     bool polygon_ctrl_impl::in_rect(double x, double y) const
     {
+        (void)x;
+        (void)y;
         return false;
     }
 
@@ -177,6 +179,8 @@ namespace agg
 
     bool polygon_ctrl_impl::on_mouse_move(double x, double y, bool button_flag)
     {
+        (void)button_flag;
+
         bool ret = false;
         double dx;
         double dy;
@@ -226,7 +230,10 @@ namespace agg
 
     bool polygon_ctrl_impl::on_mouse_button_up(double x, double y)
     {
-        bool ret = (m_node >= 0) || (m_edge >= 0);
+        (void)x;
+        (void)y;
+
+        const bool ret = (m_node >= 0) || (m_edge >= 0);
         m_node = -1;
         m_edge = -1;
         return ret;
@@ -235,6 +242,10 @@ namespace agg
 
     bool polygon_ctrl_impl::on_arrow_keys(bool left, bool right, bool down, bool up)
     {
+        (void)left;
+        (void)right;
+        (void)down;
+        (void)up;
         return false;
     }
 

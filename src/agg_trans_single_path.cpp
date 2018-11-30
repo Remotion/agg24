@@ -68,7 +68,6 @@ namespace agg
         {
             unsigned i;
             double dist;
-            double d;
 
             m_src_vertices.close(false);
             if(m_src_vertices.size() > 2)
@@ -76,8 +75,8 @@ namespace agg
                 if(m_src_vertices[m_src_vertices.size() - 2].dist * 10.0 < 
                    m_src_vertices[m_src_vertices.size() - 3].dist)
                 {
-                    d = m_src_vertices[m_src_vertices.size() - 3].dist + 
-                        m_src_vertices[m_src_vertices.size() - 2].dist;
+                    double d = m_src_vertices[m_src_vertices.size() - 3].dist +
+                            m_src_vertices[m_src_vertices.size() - 2].dist;
 
                     m_src_vertices[m_src_vertices.size() - 2] = 
                         m_src_vertices[m_src_vertices.size() - 1];

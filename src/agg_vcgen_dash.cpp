@@ -167,9 +167,9 @@ namespace agg
 
             case polyline:
                 {
-                    double dash_rest = m_dashes[m_curr_dash] - m_curr_dash_start;
+                    const double dash_rest = m_dashes[m_curr_dash] - m_curr_dash_start;
 
-                    unsigned cmd = (m_curr_dash & 1) ? 
+                    const unsigned cmd2 = (m_curr_dash & 1) ? 
                                    path_cmd_move_to : 
                                    path_cmd_line_to;
 
@@ -217,7 +217,7 @@ namespace agg
                             }
                         }
                     }
-                    return cmd;
+                    return cmd2;
                 }
                 break;
 

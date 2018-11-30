@@ -163,6 +163,8 @@ namespace agg
     //------------------------------------------------------------------------
     bool bezier_ctrl_impl::in_rect(double x, double y) const
     {
+        (void)x;
+        (void)y;
         return false;
     }
 
@@ -322,6 +324,8 @@ namespace agg
     //------------------------------------------------------------------------
     bool curve3_ctrl_impl::in_rect(double x, double y) const
     {
+        (void)x;
+        (void)y;
         return false;
     }
 

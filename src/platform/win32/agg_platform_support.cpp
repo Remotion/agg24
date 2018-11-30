@@ -597,8 +597,8 @@ namespace agg
         strcpy(m_caption, cap);
         if(m_specific->m_hwnd)
         {
-			LPCWSTR w_caption;
-			cstr2wchar_t(w_caption, m_caption, 256);
+            LPCWSTR w_caption;
+            cstr2wchar_t(w_caption, m_caption, 256);
             SetWindowText(m_specific->m_hwnd, w_caption);
         }
     }
@@ -647,14 +647,14 @@ namespace agg
 
 
         void* user_data = reinterpret_cast<void*>(::GetWindowLongPtr(hWnd, GWLP_USERDATA));
-        platform_support* app = 0;
+        platform_support* app = nullptr;
 
         if(user_data)
         {
             app = reinterpret_cast<platform_support*>(user_data);
         }
 
-        if(app == 0)
+        if(app == nullptr)
         {
             if(msg == WM_DESTROY)
             {
@@ -1005,8 +1005,8 @@ namespace agg
     //------------------------------------------------------------------------
     void platform_support::message(const char* msg)
     {
-		LPWSTR wmsg;
-		cstr2wchar_t(wmsg, msg, 256);
+        LPWSTR wmsg;
+        cstr2wchar_t(wmsg, msg, 256);
         ::MessageBox(m_specific->m_hwnd, wmsg, L"AGG Message", MB_OK);
     }
 
@@ -1043,10 +1043,10 @@ namespace agg
             wflags |= WS_THICKFRAME | WS_MAXIMIZEBOX;
         }
 
-		LPWSTR w_caption;
-		cstr2wchar_t(w_caption, m_caption, 256);
-		m_specific->m_hwnd = ::CreateWindow(L"AGGAppClass",
-											w_caption,
+        LPWSTR w_caption;
+        cstr2wchar_t(w_caption, m_caption, 256);
+        m_specific->m_hwnd = ::CreateWindow(L"AGGAppClass",
+                                            w_caption,
                                             wflags,
                                             100,
                                             100,
@@ -1072,7 +1072,7 @@ namespace agg
                      width + (width - (rct.right - rct.left)),
                      height + (height - (rct.bottom - rct.top)),
                      FALSE);
-		::SetWindowLongPtr(m_specific->m_hwnd, GWLP_USERDATA, (LONG)this);
+        ::SetWindowLongPtr(m_specific->m_hwnd, GWLP_USERDATA, (LONG)this);
         m_specific->create_pmap(width, height, &m_rbuf_window);
         m_initial_width = width;
         m_initial_height = height;

@@ -1,8 +1,8 @@
 This is a mirror of the Anti-Grain Geometry Project
 
-It comes with visual c++ 2015 solutions and Projects for all the 
+It comes with visual c++ 2017 solutions and Projects for all the 
 included examples.
-To make the examples compile with the vc2015 build chain I had to 
+To make the examples compile with the vc2017 build chain I had to 
 make a number preliminary and slight changes only to the windows 
 platform specific files. 
 The agg core files have not been modified at all.

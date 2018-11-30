@@ -573,7 +573,7 @@ namespace agg
             m_text = m_chr;
             return;
         }
-        unsigned new_size = strlen(text) + 1;
+        const unsigned new_size = unsigned(strlen(text) + 1);
         if(new_size > m_text_buf.size())
         {
             m_text_buf.resize(new_size);
